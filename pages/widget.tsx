@@ -1,3 +1,4 @@
+// Note: Trigger build
 import {
   getDefaultConfig,
   TantoConnectButton,
