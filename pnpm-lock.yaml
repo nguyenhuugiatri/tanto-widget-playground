@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@sky-mavis/tanto-widget':
-        specifier: file:sky-mavis-tanto-widget-v0.0.1.tgz
-        version: file:sky-mavis-tanto-widget-v0.0.1.tgz(@emotion/is-prop-valid@1.3.1)(@tanstack/react-query@5.74.4(react@19.1.0))(@types/react-dom@19.1.2(@types/react@19.1.2))(@types/react@19.1.2)(@wagmi/core@2.16.7(@tanstack/query-core@5.74.4)(@types/react@19.1.2)(react@19.1.0)(typescript@5.8.3)(use-sync-external-store@1.4.0(react@19.1.0))(viem@2.27.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)))(bufferutil@4.0.9)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(typescript@5.8.3)(utf-8-validate@5.0.10)(viem@2.27.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10))(wagmi@2.14.16(@tanstack/query-core@5.74.4)(@tanstack/react-query@5.74.4(react@19.1.0))(@types/react@19.1.2)(bufferutil@4.0.9)(react@19.1.0)(typescript@5.8.3)(utf-8-validate@5.0.10)(viem@2.27.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)))
+        specifier: file:sky-mavis-tanto-widget-rc.1.tgz
+        version: file:sky-mavis-tanto-widget-rc.1.tgz(@emotion/is-prop-valid@1.3.1)(@tanstack/react-query@5.74.4(react@19.1.0))(@types/react-dom@19.1.2(@types/react@19.1.2))(@types/react@19.1.2)(@wagmi/core@2.16.7(@tanstack/query-core@5.74.4)(@types/react@19.1.2)(react@19.1.0)(typescript@5.8.3)(use-sync-external-store@1.4.0(react@19.1.0))(viem@2.27.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)))(bufferutil@4.0.9)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(typescript@5.8.3)(utf-8-validate@5.0.10)(viem@2.27.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10))(wagmi@2.14.16(@tanstack/query-core@5.74.4)(@tanstack/react-query@5.74.4(react@19.1.0))(@types/react@19.1.2)(bufferutil@4.0.9)(react@19.1.0)(typescript@5.8.3)(utf-8-validate@5.0.10)(viem@2.27.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)))
       '@tanstack/react-query':
         specifier: ^5.74.4
         version: 5.74.4(react@19.1.0)
@@ -862,8 +862,8 @@ packages:
       '@wagmi/core': ^2.x
       viem: ^2.x
 
-  '@sky-mavis/tanto-widget@file:sky-mavis-tanto-widget-v0.0.1.tgz':
-    resolution: {integrity: sha512-ytie2voXuPme62Pn/5bNGJR6d6IemmMaVWNF0cUXEesObW9+Y180PHyoz2YGtSGLJqcAYWrmQdVVhVF98Ul9GA==, tarball: file:sky-mavis-tanto-widget-v0.0.1.tgz}
+  '@sky-mavis/tanto-widget@file:sky-mavis-tanto-widget-rc.1.tgz':
+    resolution: {integrity: sha512-0B2iKxAy7AHTGq2va/qe6xZuAR4h0oIMpBovN+k/Q8Xj1V5ZDE/C+NaP6BGZh5FxOC0o2CNII3vOUWfszmGvaQ==, tarball: file:sky-mavis-tanto-widget-rc.1.tgz}
     version: 0.0.1
     peerDependencies:
       '@tanstack/react-query': '>=5.0.0'
@@ -4482,7 +4482,7 @@ snapshots:
       - utf-8-validate
       - zod
 
-  '@sky-mavis/tanto-widget@file:sky-mavis-tanto-widget-v0.0.1.tgz(@emotion/is-prop-valid@1.3.1)(@tanstack/react-query@5.74.4(react@19.1.0))(@types/react-dom@19.1.2(@types/react@19.1.2))(@types/react@19.1.2)(@wagmi/core@2.16.7(@tanstack/query-core@5.74.4)(@types/react@19.1.2)(react@19.1.0)(typescript@5.8.3)(use-sync-external-store@1.4.0(react@19.1.0))(viem@2.27.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)))(bufferutil@4.0.9)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(typescript@5.8.3)(utf-8-validate@5.0.10)(viem@2.27.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10))(wagmi@2.14.16(@tanstack/query-core@5.74.4)(@tanstack/react-query@5.74.4(react@19.1.0))(@types/react@19.1.2)(bufferutil@4.0.9)(react@19.1.0)(typescript@5.8.3)(utf-8-validate@5.0.10)(viem@2.27.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)))':
+  '@sky-mavis/tanto-widget@file:sky-mavis-tanto-widget-rc.1.tgz(@emotion/is-prop-valid@1.3.1)(@tanstack/react-query@5.74.4(react@19.1.0))(@types/react-dom@19.1.2(@types/react@19.1.2))(@types/react@19.1.2)(@wagmi/core@2.16.7(@tanstack/query-core@5.74.4)(@types/react@19.1.2)(react@19.1.0)(typescript@5.8.3)(use-sync-external-store@1.4.0(react@19.1.0))(viem@2.27.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)))(bufferutil@4.0.9)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(typescript@5.8.3)(utf-8-validate@5.0.10)(viem@2.27.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10))(wagmi@2.14.16(@tanstack/query-core@5.74.4)(@tanstack/react-query@5.74.4(react@19.1.0))(@types/react@19.1.2)(bufferutil@4.0.9)(react@19.1.0)(typescript@5.8.3)(utf-8-validate@5.0.10)(viem@2.27.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)))':
     dependencies:
       '@emotion/react': 11.14.0(@types/react@19.1.2)(react@19.1.0)
       '@emotion/styled': 11.14.0(@emotion/react@11.14.0(@types/react@19.1.2)(react@19.1.0))(@types/react@19.1.2)(react@19.1.0)
@@ -6969,8 +6969,8 @@ snapshots:
   ox@0.6.9(typescript@5.8.3):
     dependencies:
       '@adraffy/ens-normalize': 1.11.0
-      '@noble/curves': 1.8.1
-      '@noble/hashes': 1.7.1
+      '@noble/curves': 1.8.2
+      '@noble/hashes': 1.7.2
       '@scure/bip32': 1.6.2
       '@scure/bip39': 1.5.4
       abitype: 1.0.8(typescript@5.8.3)
