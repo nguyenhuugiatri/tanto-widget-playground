@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@sky-mavis/tanto-widget": "file:sky-mavis-tanto-widget-rc.10.tgz",
+    "@sky-mavis/tanto-widget": "file:sky-mavis-tanto-widget-rc.11.tgz",
     "@tanstack/react-query": "^5.74.4",
     "next": "15.3.1",
     "react": "^19.0.0",
