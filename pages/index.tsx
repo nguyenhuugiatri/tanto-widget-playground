@@ -31,7 +31,7 @@ const TantoWidgetExample: FC = () => {
                 <h1 className="text-3xl md:text-4xl font-bold mb-2 bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500">
                   Tanto Widget Demo
                 </h1>
-                <p className="text-gray-300">
+                <p className="text-white">
                   Connect your wallet and sign a message
                 </p>
               </header>
@@ -73,7 +73,7 @@ function MessageSigner() {
       <Card className="bg-gray-800 border-gray-700">
         <CardHeader>
           <CardTitle>Sign Message</CardTitle>
-          <CardDescription className="text-gray-400">
+          <CardDescription className="text-white">
             Connect your wallet first to sign a message
           </CardDescription>
         </CardHeader>
@@ -85,7 +85,7 @@ function MessageSigner() {
     <Card className="bg-gray-800 border-gray-700">
       <CardHeader>
         <CardTitle>Sign Message</CardTitle>
-        <CardDescription className="text-gray-400">
+        <CardDescription className="text-white">
           Enter a message to sign with your wallet
         </CardDescription>
       </CardHeader>
@@ -93,7 +93,7 @@ function MessageSigner() {
         <div className="space-y-2">
           <label
             htmlFor="message"
-            className="text-md font-medium text-gray-300 block mb-1"
+            className="text-md font-medium text-white block mb-1"
           >
             Message
           </label>
@@ -102,14 +102,14 @@ function MessageSigner() {
             value={message}
             onChange={(e) => setMessage(e.target.value)}
             placeholder="Enter a message to sign"
-            className="bg-gray-700 border-gray-600 placeholder:text-gray-500"
+            className="bg-gray-700 border-gray-600 placeholder:text-white"
           />
         </div>
 
         <Button
           onClick={handleSign}
           disabled={isPending || !message.trim()}
-          className="w-full bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700"
+          className="w-full bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white"
         >
           {isPending ? 'Signing...' : 'Sign Message'}
         </Button>
@@ -117,11 +117,11 @@ function MessageSigner() {
         {signature && (
           <div className="space-y-2 pt-4">
             <Separator className="bg-gray-700" />
-            <label className="text-md font-medium text-gray-300 block mb-1">
+            <label className="text-md font-medium text-white block mb-1">
               Signature
             </label>
             <div className="p-3 bg-gray-900 rounded-md border border-gray-700 overflow-x-auto">
-              <p className="text-sm text-gray-300 font-mono break-all">
+              <p className="text-sm text-white font-mono break-all">
                 {signature}
               </p>
             </div>
