@@ -55,6 +55,9 @@ function MessageSigner() {
   const { isConnected } = useAccount();
   const { signMessage, isPending } = useSignMessage({
     mutation:{
+        onMutate(){
+          setSignature('');
+        },
         onSuccess(data) {
           setSignature(data);
         },
