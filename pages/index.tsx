@@ -90,7 +90,7 @@ function MessageSigner() {
         <div className="space-y-2">
           <label
             htmlFor="message"
-            className="text-sm font-medium text-gray-300 block mb-1"
+            className="text-md font-medium text-gray-300 block mb-1"
           >
             Message
           </label>
@@ -114,11 +114,11 @@ function MessageSigner() {
         {signature && (
           <div className="space-y-2 pt-4">
             <Separator className="bg-gray-700" />
-            <label className="text-sm font-medium text-gray-300 block mb-1">
+            <label className="text-md font-medium text-gray-300 block mb-1">
               Signature
             </label>
             <div className="p-3 bg-gray-900 rounded-md border border-gray-700 overflow-x-auto">
-              <p className="text-xs text-gray-300 font-mono break-all">
+              <p className="text-sm text-gray-300 font-mono break-all">
                 {signature}
               </p>
             </div>
