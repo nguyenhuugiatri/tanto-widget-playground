@@ -913,7 +913,7 @@ packages:
       viem: ^2.x
 
   '@sky-mavis/tanto-widget@file:sky-mavis-tanto-widget-rc.32.tgz':
-    resolution: {integrity: sha512-7eI4m7127hlxXC0+DwD2jtZ0R76UZVsaNxrUYDSz3fMH5+tkijPfrL4gkzZVijTFmPgFX6tnLRLLP+Mr3H8Ozg==, tarball: file:sky-mavis-tanto-widget-rc.32.tgz}
+    resolution: {integrity: sha512-bUFSgIOcRv+d25seej7EGXtuGACppHQTB+V/oHaZ+aV2CjH5uFTIlEWQ6IU4HfPt72ZQ9PP/4OIDKkoAPvPEfA==, tarball: file:sky-mavis-tanto-widget-rc.32.tgz}
     version: 0.0.1
     peerDependencies:
       '@tanstack/react-query': '>=5.0.0'
@@ -4581,7 +4581,6 @@ snapshots:
     dependencies:
       '@emotion/react': 11.14.0(@types/react@19.1.2)(react@19.1.0)
       '@emotion/styled': 11.14.0(@emotion/react@11.14.0(@types/react@19.1.2)(react@19.1.0))(@types/react@19.1.2)(react@19.1.0)
-      '@radix-ui/react-compose-refs': 1.1.2(@types/react@19.1.2)(react@19.1.0)
       '@radix-ui/react-dialog': 1.1.7(@types/react-dom@19.1.2(@types/react@19.1.2))(@types/react@19.1.2)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       '@sky-mavis/tanto-connect': 0.0.18(@types/react@19.1.2)(bufferutil@4.0.9)(react@19.1.0)(typescript@5.8.3)(utf-8-validate@5.0.10)
       '@sky-mavis/tanto-wagmi': 0.0.7(@types/react@19.1.2)(@wagmi/core@2.16.7(@tanstack/query-core@5.74.4)(@types/react@19.1.2)(react@19.1.0)(typescript@5.8.3)(use-sync-external-store@1.4.0(react@19.1.0))(viem@2.27.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)))(bufferutil@4.0.9)(react@19.1.0)(typescript@5.8.3)(utf-8-validate@5.0.10)(viem@2.27.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10))
@@ -4592,7 +4591,6 @@ snapshots:
       detect-browser: 5.3.0
       motion: 12.7.4(@emotion/is-prop-valid@1.3.1)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       qr-code-styling: 1.9.2
-      use-callback-ref: 1.3.3(@types/react@19.1.2)(react@19.1.0)
       use-resize-observer: 9.1.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       vaul: 1.1.2(@types/react-dom@19.1.2(@types/react@19.1.2))(@types/react@19.1.2)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       viem: 2.27.2(bufferutil@4.0.9)(typescript@5.8.3)(utf-8-validate@5.0.10)
