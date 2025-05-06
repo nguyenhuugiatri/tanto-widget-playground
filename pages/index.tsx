@@ -17,7 +17,13 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { FC, useState } from 'react';
 import { useAccount, useSignMessage, WagmiProvider } from 'wagmi';
 
-const config = getDefaultConfig();
+const config = getDefaultConfig({
+  ssr: true,
+  keylessWalletConfigs: {
+    clientId: 'dbe1e3ff-e145-422f-84c4-e0beb4972f69',
+    waypointOrigin: 'https://id.skymavis.one',
+  },
+});
 
 const queryClient = new QueryClient();
 const TantoWidgetExample: FC = () => {
