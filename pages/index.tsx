@@ -30,7 +30,7 @@ const TantoWidgetExample: FC = () => {
   return (
     <WagmiProvider config={config}>
       <QueryClientProvider client={queryClient}>
-        <TantoProvider theme="dark">
+        <TantoProvider>
           <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800 text-white p-4 md:p-8">
             <div className="max-w-3xl mx-auto">
               <header className="mb-8 text-center">
