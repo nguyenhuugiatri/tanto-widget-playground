@@ -11,7 +11,7 @@ import { Textarea } from '@/components/ui/textarea';
 import {
   getDefaultConfig,
   TantoConnectButton,
-  TantoProvider
+  TantoProvider,
 } from '@sky-mavis/tanto-widget';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { FC, useState } from 'react';
@@ -22,6 +22,9 @@ const config = getDefaultConfig({
   keylessWalletConfig: {
     clientId: 'dbe1e3ff-e145-422f-84c4-e0beb4972f69',
     waypointOrigin: 'https://id.skymavis.one',
+  },
+  coinbaseWalletConfig: {
+    enable: true,
   },
 });
 
@@ -60,14 +63,14 @@ function MessageSigner() {
   const [signature, setSignature] = useState('');
   const { isConnected } = useAccount();
   const { signMessage, isPending } = useSignMessage({
-    mutation:{
-        onMutate(){
-          setSignature('');
-        },
-        onSuccess(data) {
-          setSignature(data);
-        },
-    }
+    mutation: {
+      onMutate() {
+        setSignature('');
+      },
+      onSuccess(data) {
+        setSignature(data);
+      },
+    },
   });
 
   const handleSign = () => {
