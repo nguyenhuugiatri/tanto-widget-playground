@@ -217,10 +217,7 @@ function MessageSigner({ theme }: { theme: 'dark' | 'light' | 'custom' }) {
           onClick={handleSign}
           disabled={isPending || !message.trim()}
           className={cn(
-            'w-full',
-            theme === 'dark' && 'bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white',
-            theme === 'light' && 'bg-gradient-to-r from-blue-200 to-blue-400 hover:from-blue-300 hover:to-blue-500 text-gray-900',
-            theme === 'custom' && 'bg-gradient-to-r from-[#fcb69f] to-[#ffecd2] hover:from-[#fcb69f] hover:to-[#ffe3b3] text-orange-900'
+            'w-full bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white',
           )}
         >
           {isPending ? 'Signing...' : 'Sign Message'}
