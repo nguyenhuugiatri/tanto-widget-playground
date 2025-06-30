@@ -143,7 +143,7 @@ const TantoWidgetExample: FC = () => {
               </div>
 
               <div className="flex justify-center mb-8">
-                <TantoConnectButton  text='Connect & Auth'/>
+                <TantoConnectButton  text='Sign in'/>
               </div>
 
               <MessageSigner theme={theme} />
