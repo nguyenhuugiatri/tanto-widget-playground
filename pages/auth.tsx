@@ -11,9 +11,12 @@ import { Separator } from '@/components/ui/separator';
 import { Textarea } from '@/components/ui/textarea';
 import { cn } from '@/lib/utils';
 import {
+  darkTheme,
   getDefaultConfig,
+  lightTheme,
   TantoConnectButton,
   TantoProvider,
+  useAuthEffect,
 } from '@sky-mavis/tanto-widget';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { FC, useState } from 'react';
@@ -62,12 +65,26 @@ const TantoWidgetExample: FC = () => {
     setTheme(value);
   }
 
+    const getTheme = () => {
+    if (theme === 'custom') return lightTheme(customThemeToken);
+    if (theme === 'dark') return darkTheme();
+    return lightTheme();
+  };
+
+  useAuthEffect({
+    onSuccess: (data) => {
+      console.log('Authenticated successfully:', data);
+    },
+      onError: (error) => {
+      console.error('Authentication error:', error);
+    },
+  })
+
   return (
     <WagmiProvider config={config}>
       <QueryClientProvider client={queryClient}>
         <TantoProvider
-          theme={theme !== 'custom' ? theme : undefined}
-          customThemeToken={theme === 'custom' ? customThemeToken : undefined}
+          theme={getTheme()}
           config={{
             createAccountOnConnect: true,
           }}
@@ -143,7 +160,7 @@ const TantoWidgetExample: FC = () => {
               </div>
 
               <div className="flex justify-center mb-8">
-                <TantoConnectButton  text='Sign in'/>
+                <TantoConnectButton  label='Sign in'/>
               </div>
 
               <MessageSigner theme={theme} />
