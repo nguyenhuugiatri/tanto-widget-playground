@@ -73,10 +73,10 @@ const TantoWidgetExample: FC = () => {
 
   useAuthEffect({
     onSuccess: (data) => {
-      console.log('Authenticated successfully:', data);
+      alert('Authenticated successfully:' + JSON.stringify(data, null, 2));
     },
       onError: (error) => {
-      console.error('Authentication error:', error);
+      alert('Authentication failed: ' + JSON.stringify(error, null, 2));
     },
   })
 
@@ -86,6 +86,7 @@ const TantoWidgetExample: FC = () => {
         <TantoProvider
           theme={getTheme()}
           config={{
+            clientId: '44d9c0c3-840b-4bf5-9b72-b2260724c47b',
             createAccountOnConnect: true,
           }}
         >

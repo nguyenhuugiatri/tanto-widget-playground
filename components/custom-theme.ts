@@ -1,7 +1,6 @@
-import { TantoWidgetCustomTheme } from "@sky-mavis/tanto-widget";
+import { TantoWidgetCustomThemeTokens } from "@sky-mavis/tanto-widget";
 
-export const customThemeToken: TantoWidgetCustomTheme = {
-  mode: 'light',
+export const customThemeToken: TantoWidgetCustomThemeTokens = {
   fontSize: '1em',
   buttonPrimaryBackground: 'oklch(0.71 0.097 111.7)',
   buttonPrimaryColor: 'oklch(0.98 0.005 0)',
