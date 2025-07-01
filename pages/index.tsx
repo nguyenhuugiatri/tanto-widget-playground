@@ -24,7 +24,7 @@ import { useAccount, useSignMessage, WagmiProvider } from 'wagmi';
 const config = getDefaultConfig({
   ssr: true,
   keylessWalletConfig: {
-    clientId: '44d9c0c3-840b-4bf5-9b72-b2260724c47b',
+    clientId: 'dbe1e3ff-e145-422f-84c4-e0beb4972f69',
   },
   coinbaseWalletConfig: {
     enable: true,
