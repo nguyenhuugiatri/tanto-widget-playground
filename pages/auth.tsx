@@ -192,7 +192,9 @@ function AuthInfo({ theme }: { theme: 'dark' | 'light' | 'custom' }) {
       <CardHeader>
         <CardTitle className={themeTextClass[theme]}>ID Token</CardTitle>
         <CardDescription className={themeTextClass[theme]}>
-          <pre>{JSON.stringify(decodedToken, null, 2)}</pre>
+            <pre style={{ whiteSpace: 'pre-wrap', wordBreak: 'break-all' }}>
+            {JSON.stringify(decodedToken, null, 2)}
+            </pre>
         </CardDescription>
       </CardHeader>
     </Card>
