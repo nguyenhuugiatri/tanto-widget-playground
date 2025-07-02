@@ -21,6 +21,7 @@ import {
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { FC, useState } from 'react';
 import { useAccount, useSignMessage, WagmiProvider } from 'wagmi';
+import { jwtDecode } from 'jwt-decode';
 
 const config = getDefaultConfig({
   ssr: true,
@@ -72,15 +73,6 @@ const TantoWidgetExample: FC = () => {
     return lightTheme();
   };
 
-  useAuthEffect({
-    onSuccess: (data) => {
-      alert('Authenticated successfully:' + JSON.stringify(data, null, 2));
-    },
-    onError: (error) => {
-      alert('Authentication failed: ' + JSON.stringify(error, null, 2));
-    },
-  });
-
   return (
     <WagmiProvider config={config}>
       <QueryClientProvider client={queryClient}>
@@ -88,7 +80,8 @@ const TantoWidgetExample: FC = () => {
           theme={getTheme()}
           config={{
             clientId: 'dbe1e3ff-e145-422f-84c4-e0beb4972f69',
-            __internal_customBaseUrl: 'https://waypoint-api.skymavis.one/v1/rpc/public',
+            __internal_customBaseUrl:
+              'https://waypoint-api.skymavis.one/v1/rpc/public',
             createAccountOnConnect: true,
           }}
         >
@@ -162,7 +155,10 @@ const TantoWidgetExample: FC = () => {
                 <TantoConnectButton label="Sign in" />
               </div>
 
-              <MessageSigner theme={theme} />
+              <div className="flex flex-col gap-2">
+                <AuthInfo theme={theme} />
+                <MessageSigner theme={theme} />
+              </div>
             </div>
           </div>
         </TantoProvider>
@@ -170,6 +166,38 @@ const TantoWidgetExample: FC = () => {
     </WagmiProvider>
   );
 };
+
+function AuthInfo({ theme }: { theme: 'dark' | 'light' | 'custom' }) {
+  const { isConnected } = useAccount();
+  const [token, setToken] = useState('');
+
+  useAuthEffect({
+    onSuccess: (data) => {
+      console.log('data', data)
+      setToken(data.token);
+    },
+    onError: (error) => {
+      alert('Authentication failed: ' + JSON.stringify(error, null, 2));
+    },
+  });
+
+  if (!isConnected || !token) {
+    return null;
+  }
+
+  const decodedToken = jwtDecode(token);
+
+  return (
+    <Card className={themeCardClass[theme]}>
+      <CardHeader>
+        <CardTitle className={themeTextClass[theme]}>ID Token</CardTitle>
+        <CardDescription className={themeTextClass[theme]}>
+          <pre>{JSON.stringify(decodedToken, null, 2)}</pre>
+        </CardDescription>
+      </CardHeader>
+    </Card>
+  );
+}
 
 function MessageSigner({ theme }: { theme: 'dark' | 'light' | 'custom' }) {
   const [message, setMessage] = useState('Hello, Web3 World!');
