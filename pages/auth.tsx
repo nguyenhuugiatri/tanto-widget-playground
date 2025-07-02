@@ -20,7 +20,12 @@ import {
 } from '@sky-mavis/tanto-widget';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { FC, useState } from 'react';
-import { useAccount, useSignMessage, WagmiProvider } from 'wagmi';
+import {
+  useAccount,
+  useAccountEffect,
+  useSignMessage,
+  WagmiProvider,
+} from 'wagmi';
 import { jwtDecode } from 'jwt-decode';
 
 const config = getDefaultConfig({
@@ -171,9 +176,15 @@ function AuthInfo({ theme }: { theme: 'dark' | 'light' | 'custom' }) {
   const { isConnected } = useAccount();
   const [token, setToken] = useState('');
 
+  useAccountEffect({
+    onDisconnect: () => {
+      setToken('');
+    },
+  });
+
   useAuthEffect({
     onSuccess: (data) => {
-      console.log('data', data)
+      console.log('data', data);
       setToken(data.token);
     },
     onError: (error) => {
@@ -192,9 +203,9 @@ function AuthInfo({ theme }: { theme: 'dark' | 'light' | 'custom' }) {
       <CardHeader>
         <CardTitle className={themeTextClass[theme]}>ID Token</CardTitle>
         <CardDescription className={themeTextClass[theme]}>
-            <pre style={{ whiteSpace: 'pre-wrap', wordBreak: 'break-all' }}>
+          <pre style={{ whiteSpace: 'pre-wrap', wordBreak: 'break-all' }}>
             {JSON.stringify(decodedToken, null, 2)}
-            </pre>
+          </pre>
         </CardDescription>
       </CardHeader>
     </Card>
