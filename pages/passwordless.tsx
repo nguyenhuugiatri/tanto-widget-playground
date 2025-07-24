@@ -88,7 +88,9 @@ const TantoWidgetExample: FC = () => {
           theme={getTheme()}
           config={{
             clientId: 'dbe1e3ff-e145-422f-84c4-e0beb4972f69',
-            __internal_baseUrl: 'https://waypoint-api.skymavis.one/v1/rpc/public',
+            __internal_baseUrl:
+              'https://waypoint-api.skymavis.one/v1/rpc/public',
+            createAccountOnConnect: true,
           }}
         >
           <div
