@@ -87,7 +87,7 @@ const TantoWidgetExample: FC = () => {
         <TantoProvider
           theme={getTheme()}
           config={{
-            clientId: 'c470d211-493b-4f9b-978f-e5d00ace0232',
+            clientId: 'dbe1e3ff-e145-422f-84c4-e0beb4972f69',
             __internal_baseUrl: 'https://waypoint-api.skymavis.one/v1/rpc/public',
           }}
         >
@@ -158,7 +158,7 @@ const TantoWidgetExample: FC = () => {
               </div>
 
               <div className="flex justify-center mb-8">
-                <TantoConnectButton label="Sign in" />
+                <TantoConnectButton label="Connect Wallet" />
               </div>
 
               <div className="flex flex-col gap-2">
