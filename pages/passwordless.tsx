@@ -90,7 +90,7 @@ const TantoWidgetExample: FC = () => {
             clientId: 'dbe1e3ff-e145-422f-84c4-e0beb4972f69',
             __internal_baseUrl:
               'https://waypoint-api.skymavis.one/v1/rpc/public',
-            createAccountOnConnect: true,
+            hideConnectSuccessPrompt: true,
           }}
         >
           <div
