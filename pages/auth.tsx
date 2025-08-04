@@ -31,7 +31,7 @@ import { jwtDecode } from 'jwt-decode';
 const config = getDefaultConfig({
   ssr: true,
   keylessWalletConfig: {
-    clientId: 'dbe1e3ff-e145-422f-84c4-e0beb4972f69',
+    clientId: '44d9c0c3-840b-4bf5-9b72-b2260724c47b',
     waypointOrigin: 'https://id.skymavis.one',
   },
   coinbaseWalletConfig: {
@@ -84,9 +84,7 @@ const TantoWidgetExample: FC = () => {
         <TantoProvider
           theme={getTheme()}
           config={{
-            clientId: 'dbe1e3ff-e145-422f-84c4-e0beb4972f69',
-            __internal_baseUrl:
-              'https://waypoint-api.skymavis.one/v1/rpc/public',
+            clientId: '44d9c0c3-840b-4bf5-9b72-b2260724c47b',
             createAccountOnConnect: true,
           }}
         >
